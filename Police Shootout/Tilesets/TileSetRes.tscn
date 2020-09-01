@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Tilesets/Tiles1.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 22.0816, 16.046 )
+
+[node name="TileSetRes" type="Node2D"]
+
+[node name="Tile_01" type="Sprite" parent="."]
+scale = Vector2( 3, 3 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 369.748, 64.8461, 44.2307, 31.6572 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile_01"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile_01/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile_02" type="Sprite" parent="."]
+position = Vector2( 176.003, -0.594604 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 306.211, 112.162, 44.3503, 31.9415 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile_02"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile_02/StaticBody2D"]
+shape = SubResource( 1 )

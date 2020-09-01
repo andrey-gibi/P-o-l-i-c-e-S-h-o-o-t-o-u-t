@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Ment/Policed.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tilesets/TileMa.tres" type="TileSet" id=3]
+[ext_resource path="res://Fons/1.jpg" type="Texture" id=4]
+[ext_resource path="res://Fishki/Coin.tscn" type="PackedScene" id=5]
+
+[node name="Lvl1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 478.958, 265.668 )
+
+[node name="Policed" parent="." instance=ExtResource( 2 )]
+position = Vector2( 736.456, 196.331 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 3, 3 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 44, 30 )
+collision_layer = 3
+format = 1
+tile_data = PoolIntArray( 131073, 1, 0, 131078, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 499.997, 250.001 )
+scale = Vector2( 1.95314, 1.9531 )
+texture = ExtResource( 4 )
+
+[node name="Coin" parent="." instance=ExtResource( 5 )]
+position = Vector2( 198.069, 159.372 )
+
+[node name="Coin2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 860.458, 158.182 )
+
+[node name="Coin3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 50.6077, 247.373 )
+
+[node name="Coin4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 340.411, 247.128 )
+
+[node name="Coin5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 734.402, 246.184 )
+
+[node name="Coin6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 990.081, 246.184 )
